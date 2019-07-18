@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import NameLabel from './NameLabel';
-class App extends Component {
+import React from 'react';
+import SuperHeroList from './components/SuperHeroList';
+import SuperHeroForm from './components/SuperHeroForm';
+import './styles/index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+class App extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = {
-          name: 'Shankar Acharya',
-          post: 'Future EM',
-      }
+    super(props);
   }
-  componentDidMount() {
-      let count = 0
-      setTimeout( () => {
-          this.setState({name: 'Shankar is good '+(++count)});
-      }, 2000);
-  }
+
   render() {
-    const { name, post } = this.state;
-    return <NameLabel name={name} />;
+    return (
+      <div>
+        <SuperHeroList />
+        <SuperHeroForm />
+    </div>
+);
   }
 }
 
