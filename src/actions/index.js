@@ -30,7 +30,7 @@ export const addSuperHero = (newSuperHero) => {
         })
         .catch((error) => {
             console.log(error);
-            dispatch({ type: 'FETCH_DATA_ERROR'});
+            dispatch({ type: 'FETCH_DATA_ERROR' });
         })
     }
 }

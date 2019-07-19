@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   list: [],
 };
 const listReducer = (state = initialState, action) => {
